@@ -1,5 +1,7 @@
 # Powerful Multi-Agent AI System with Groq
 
+https://github.com/prajwalghotkar/Agentic-AI-
+
 ## 1. Project Overview
 
 `powerful_multi_agent_groq.ipynb` is a general-purpose Agentic AI project built with Groq, LangChain, and LangGraph Supervisor.
