@@ -500,3 +500,80 @@ The key idea is not simply using an LLM to answer a question. The project demons
 6. Return a clean final response.
 
 This makes the notebook a practical demonstration of LLM tool use, specialized agents, dynamic routing, supervision, and multi-agent orchestration.
+
+----
+
+# LangGraph RAG Agent with Hugging Face LLM
+
+This project implements a RAG-based agent using LangGraph, Chroma, Hugging Face embeddings, and the Falcon-7B Hugging Face LLM.
+
+## Pipeline
+
+```text
+Web URLs
+   ↓
+UnstructuredURLLoader
+   ↓
+Document Chunks
+   ↓
+Hugging Face Embeddings
+   ↓
+Chroma Vector Database
+   ↓
+Retriever
+   ↓
+LangGraph
+   ↓
+RAG Prompt
+   ↓
+Hugging Face Falcon-7B
+   ↓
+Final Answer
+```
+
+## Components
+
+- **LangChain** — RAG pipeline components
+- **LangGraph** — workflow/state graph
+- **UnstructuredURLLoader** — loads knowledge from URLs
+- **RecursiveCharacterTextSplitter** — splits documents into chunks
+- **Hugging Face Embeddings** — converts chunks into vector representations
+- **Chroma** — stores and retrieves embeddings locally
+- **Hugging Face Falcon-7B** — generates the final response
+- **4-bit quantization** — reduces GPU memory usage for the Colab T4 runtime
+
+## Knowledge Sources
+
+The notebook loads:
+
+- `https://github.com/langchain-ai`
+- `https://github.com/prajwalghotkar`
+
+## Google Colab
+
+The notebook is configured for a GPU runtime and stores the Chroma database at:
+
+```text
+/content/my_chroma_db
+```
+
+The Falcon-7B model is loaded using 4-bit quantization to reduce GPU memory usage.
+
+## Main Graph
+
+The LangGraph workflow contains two nodes:
+
+```text
+START
+  ↓
+retrieve
+  ↓
+generate
+```
+
+The `retrieve` node searches Chroma for relevant context. The `generate` node combines that context with the question and passes it to the Hugging Face LLM.
+
+## Run
+
+Open the notebook in Google Colab, select a GPU runtime, and execute the cells from top to bottom.
+
