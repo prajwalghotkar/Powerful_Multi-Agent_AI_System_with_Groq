@@ -692,8 +692,6 @@ Write a Python program to find the largest number in a list.
 
 The AI agent will generate a Python solution for the question.
 
-<img width="960" height="540" alt="Screenshot 2026-10-04 005434" src="https://github.com/user-attachments/assets/edcbb4ff-407d-4494-a597-66bc45364834" />
-
 
 <img width="960" height="540" alt="Screenshot 2026-10-04 005434" src="https://github.com/user-attachments/assets/5d75c40f-64ea-497b-a8d1-864164a2a18f" />
 
