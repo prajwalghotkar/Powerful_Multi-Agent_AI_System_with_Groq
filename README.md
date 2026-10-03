@@ -692,6 +692,27 @@ Write a Python program to find the largest number in a list.
 
 The AI agent will generate a Python solution for the question.
 
+<img width="960" height="540" alt="Screenshot 2026-10-04 005434" src="https://github.com/user-attachments/assets/edcbb4ff-407d-4494-a597-66bc45364834" />
+
+
+<img width="960" height="540" alt="Screenshot 2026-10-04 005434" src="https://github.com/user-attachments/assets/5d75c40f-64ea-497b-a8d1-864164a2a18f" />
+
+
+<img width="960" height="540" alt="Screenshot 2026-10-04 005755" src="https://github.com/user-attachments/assets/336099bc-7ab9-4092-a3cc-67f570f29250" />
+
+
+<img width="960" height="540" alt="Screenshot 2026-10-04 010056" src="https://github.com/user-attachments/assets/4e74a8aa-5c41-401f-ae3d-5ee2367a5286" />
+
+
+<img width="960" height="540" alt="Screenshot 2026-10-04 010104" src="https://github.com/user-attachments/assets/d412321d-d355-490e-8f87-01ce7840057c" />
+
+
+<img width="960" height="540" alt="Screenshot 2026-10-04 010210" src="https://github.com/user-attachments/assets/458674c0-6c38-438f-ae03-10e9ebe3503d" />
+
+
+
+
+
 ## Technologies Used
 
 - Python
