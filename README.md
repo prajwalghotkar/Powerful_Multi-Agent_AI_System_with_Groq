@@ -577,3 +577,130 @@ The `retrieve` node searches Chroma for relevant context. The `generate` node co
 
 Open the notebook in Google Colab, select a GPU runtime, and execute the cells from top to bottom.
 
+----
+
+# Agno AI Agent with Groq
+
+This is a simple AI Q&A Agent built using the **Agno AI Framework** and **Groq API**.
+
+The agent uses the Groq model `openai/gpt-oss-120b` to understand questions and generate answers.
+
+## 1. Import Libraries
+
+```python
+from dotenv import load_dotenv
+import os
+
+from agno.agent import Agent
+from agno.models.groq import Groq
+```
+
+- `dotenv` is used to load the API key from the `.env` file.
+- `os` is used to access environment variables.
+- `Agent` is used to create the Agno AI agent.
+- `Groq` is used to connect the agent with the Groq AI model.
+
+## 2. Load Environment Variables
+
+```python
+load_dotenv()
+```
+
+This loads the variables stored in the `.env` file.
+
+The `.env` file contains the Groq API key:
+
+```text
+GROQ_API_KEY="your_groq_api_key"
+```
+
+The API key should not be shared publicly.
+
+## 3. Get the Groq API Key
+
+```python
+api_key = os.getenv("GROQ_API_KEY")
+```
+
+This reads the `GROQ_API_KEY` from the `.env` file.
+
+Then we check whether the API key exists:
+
+```python
+if not api_key:
+    raise ValueError("GROQ_API_KEY is not set in your .env file")
+```
+
+If the key is missing, the program shows an error.
+
+## 4. Create the Agno Agent
+
+```python
+agno_agent = Agent(
+    model=Groq(id="openai/gpt-oss-120b"),
+    description="Agno Q&A agent",
+    markdown=False
+)
+```
+
+Here we create an AI agent using the Groq model.
+
+- `model` → selects the Groq AI model.
+- `description` → describes the purpose of the agent.
+- `markdown=False` → keeps the response in normal text format.
+
+## 5. Ask a Question
+
+```python
+agno_agent.print_response(
+    "write a python program to find the largest number in list?",
+    stream=True
+)
+```
+
+This sends a question to the AI agent.
+
+The agent generates the answer using the Groq model.
+
+`stream=True` means the answer is displayed gradually while it is being generated.
+
+## How It Works
+
+The basic flow is:
+
+```text
+Python Code
+     ↓
+Load .env
+     ↓
+Get Groq API Key
+     ↓
+Create Agno Agent
+     ↓
+Connect to Groq Model
+     ↓
+Ask Question
+     ↓
+AI Generated Answer
+```
+
+## Example Question
+
+```text
+Write a Python program to find the largest number in a list.
+```
+
+The AI agent will generate a Python solution for the question.
+
+## Technologies Used
+
+- Python
+- Agno
+- Groq
+- python-dotenv
+
+## Purpose
+
+This project demonstrates how to create a basic **AI Agent using the Agno framework with Groq as the LLM provider**.
+
+
