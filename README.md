@@ -703,3 +703,9 @@ The AI agent will generate a Python solution for the question.
 
 This project demonstrates how to create a basic **AI Agent using the Agno framework with Groq as the LLM provider**.
 
+
+
+https://github.com/user-attachments/assets/eb42a813-acd0-4591-853a-4a79c3eee261
+
+
+
